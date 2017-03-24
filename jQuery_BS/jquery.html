@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>learn jquery</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>learn jquery</title>
 
-	<!-- Bootstrap -->
-	<link href="css/mycss.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="css/mycss.css" rel="stylesheet">
 
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -21,7 +21,7 @@
     </head>
     <body>
      <div class="container">
-      <div class="page-header">
+      <div class="page-header" id="Buttons">
        <h1>Buttons</h1>
      </div>
      <!-- Button -->
@@ -34,7 +34,7 @@
        <button type="button" data-panelid="panel6" class="btn btn-danger">Danger</button>
      </div>
 
-      <div class="page-header">
+      <div class="page-header" id="Navbar">
        <h1>Navbar</h1>
      </div>
      <!-- navbar -->
@@ -48,11 +48,11 @@
            </div> 
            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9"> 
              <ul class="nav navbar-nav"> 
-               <li class="active"><a href="#">Buttons</a></li> 
-               <li><a href="#">Navbar</a></li> 
-               <li><a href="#">Panels</a></li> 
-               <li><a href="#">Tables</a></li> 
-               <li><a href="#">Carousel</a></li> 
+               <li class="active"><a href="#Buttons">Buttons</a></li> 
+               <li><a href="#Navbar">Navbar</a></li> 
+               <li><a href="#Panels">Panels</a></li> 
+               <li><a href="#Tables">Tables</a></li> 
+               <li><a href="#Carousel">Carousel</a></li> 
              </ul> 
            </div> 
          </div> 
@@ -60,7 +60,7 @@
      </div>
 
 
-     <div class="page-header">
+     <div class="page-header panel-page-header" id="Panels">
        <h1>Panels</h1>
      </div>
 
@@ -144,7 +144,7 @@
 </div>
 </div>
 
-      <div class="page-header">
+      <div class="page-header" id="Tables">
        <h1>Tables</h1>
      </div>
 <!-- table -->
@@ -215,7 +215,7 @@
 
 <!-- Carousel -->
 <div class="mycarousel">
-  <div class="page-header">
+  <div class="page-header" id="Carousel">
     <h1>Carousel</h1>
   </div>
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -246,6 +246,8 @@
   </div>
 </div>
 
+
+<!-- olark -->
 <div class="olark-container">
   <button type="button" class="olark-button"> 
     <span class="glyphicon glyphicon-envelope olark-button-icon" aria-hidden="true"></span>

@@ -182,6 +182,26 @@
 }
 
 /*navbar*/
-.navbar{
+.mynavbar{
 	margin-top: 20px;
+	z-index: 100;
+	/*width: 100%;*/
+	/*left:0px;*/
+	position: relative;
+	/*top:0px;*/
 }
+
+.mynavbar.isStuck{
+	width: 100%;
+	left:0px;
+	position: fixed;
+	top:0px;
+}
+
+.navbar.navbar-inverse{
+	width: 1140px;
+	margin-right: auto;
+    margin-left: auto;
+}
+
+

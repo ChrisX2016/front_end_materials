@@ -19,6 +19,7 @@
 // 	});
 // });
 
+// panel
 $(function(){
 	$('.btn').on('click',function(){
 		var panelId = $(this).attr('data-panelid');
@@ -42,6 +43,7 @@ $(function(){
 	});
 });
 
+// Carousel
 function showChevron(){
 	$('.carousel-control,.glyphicon.glyphicon-chevron-left,.glyphicon.glyphicon-chevron-right').fadeIn(500);
 	$('li[data-target="#carousel-example-generic"]').slideToggle(200);
@@ -57,10 +59,11 @@ $(function(){
 })
 
 $(function(){
-	$('#carousel-example-generic').on('mouseenter',showChevron).on('mouseleave',hiddenChevron)
+	$('#carousel-example-generic').on('mouseenter',showChevron()).on('mouseleave',hiddenChevron())
 });
 
 
+// olark
 $(function(){
 	$('.olark-button').on('click',function(){
 		$(this).slideUp(200,function(){
@@ -77,3 +80,53 @@ $(function(){
 	});
 });
 
+// navbar
+var buttomHeight = 2 * $('.page-header').outerHeight(true) + $('.jumbotron').outerHeight() - parseInt($(".mynavbar").css("margin-top"));
+
+$(function(){
+	$(window).scroll(function(){
+		if($(window).scrollTop() >= buttomHeight){
+			$('.mynavbar').addClass("isStuck");
+
+			$('.page-header.panel-page-header').css({"margin-top":"112px"});
+		}
+		else{
+			$('.mynavbar').removeClass("isStuck");
+			$('.page-header.panel-page-header').css({"margin-top":"40px"});
+		}
+	});
+});
+
+$(function(){
+	var top;
+	var buttonHeight = "0"+"px";
+	var narvbarHeight = $('.page-header').outerHeight(true) + $('.jumbotron').outerHeight();
+	var panelHeight = narvbarHeight + $('.page-header').outerHeight(true) + $('.mynavbar').innerHeight();
+	var tableHeight = panelHeight + $('.page-header').outerHeight(true) + $('.mypanel').outerHeight();
+	var carouselHeight = tableHeight + $('.page-header').outerHeight(true) + $('mytable').outerHeight();
+
+	$(window).scroll(function(){
+		top = $(window).scrollTop();
+		if(top<narvbarHeight){
+			$('.nav.navbar-nav li:eq(0)').addClass("active");
+			$('.nav.navbar-nav li:not(:eq(0))').removeClass("active");
+		}
+		else if(top<panelHeight){
+			$('.nav.navbar-nav li:eq(1)').addClass("active");
+			$('.nav.navbar-nav li:not(:eq(1))').removeClass("active");
+		}
+		else if(top<tableHeight){
+			$('.nav.navbar-nav li:eq(2)').addClass("active");
+			$('.nav.navbar-nav li:not(:eq(2))').removeClass("active");
+		}
+		else if(top<carouselHeight){
+			$('.nav.navbar-nav li:eq(3)').addClass("active");
+			$('.nav.navbar-nav li:not(:eq(3))').removeClass("active");
+		}
+		else{
+			$('.nav.navbar-nav li:eq(4)').addClass("active");
+			$('.nav.navbar-nav li:not(:eq(4))').removeClass("active");
+		}
+	});
+
+})
